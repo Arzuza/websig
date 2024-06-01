@@ -1,0 +1,26 @@
+<?php 
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class KabupatenModel extends Model
+{
+    protected $table = 'kabupaten'; // Nama tabel
+    protected $primaryKey = 'id_kabupaten'; // Primary key tabel
+    protected $returnType = 'object';
+    protected $useSoftDeletes = false;
+    protected $useAutoIncrement = true;
+
+    // Nama semua field pada tabel
+    protected $allowedFields = [
+        'id_kabupaten', 
+        'kode_kabupaten', 
+        'nama_kabupaten', 
+        'koordinat', 
+        'jumlah_penduduk', 
+        'luas_wilayah'
+    ];
+    
+    protected $skipValidation = true;
+}
+?>
